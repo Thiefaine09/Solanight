@@ -13,16 +13,14 @@ function PianoPage() {
       {/* Contenu principal */}
       <section className="relative z-10 px-6 py-24 md:px-20">
         <div className="text-center mb-16">
-          <h1
-            className="text-4xl md:text-5xl font-bold text-white mb-4"
-            style={{ textShadow: '1px 1px 4px rgba(255, 255, 255, 0.2)' }}
-          >
+          <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg mb-4">
             🎹 Mon Univers
           </h1>
-          <p className="text-lg text-gray-300 max-w-xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Quelques-uns de mes meilleurs moments piano partagés sur TikTok.
           </p>
         </div>
+
 
         {/* Galerie TikTok */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">

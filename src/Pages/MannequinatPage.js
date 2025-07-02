@@ -51,14 +51,15 @@ function MannequinatPage() {
 
   return (
     <section className="min-h-screen bg-black text-white px-6 py-24 md:px-20">
-      <div className="text-center mb-12">
+      <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg mb-4">
           📸 Mannequinat & Expression Visuelle
         </h1>
-        <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+        <p className="text-lg text-gray-300 max-w-3xl mx-auto">
           Entre regard, posture et émotion, chaque photo raconte une histoire.
         </p>
       </div>
+
 
       {/* Filtres dynamiques */}
       <div className="flex flex-wrap justify-center gap-4 mb-10">
