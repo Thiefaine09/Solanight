@@ -1,48 +1,33 @@
-.glow-border {
+.glow-border-container {
   position: relative;
-  padding: 6px; /* fine bordure */
   border-radius: 1rem;
-  background: black;
   overflow: hidden;
+  padding: 4px;
 }
 
-.glow-border::before {
-  content: "";
+.glow-border {
   position: absolute;
   inset: 0;
-  padding: 3px;
   border-radius: 1rem;
   background: conic-gradient(
     from 0deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.1)
+    white,
+    transparent,
+    white,
+    transparent,
+    white
   );
-  animation: rotateLight 5s linear infinite;
+  animation: rotateBorder 4s linear infinite;
   z-index: 1;
-  mask: 
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask-composite: destination-out;
+  filter: blur(6px);
   pointer-events: none;
 }
 
-.glow-border video {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 1rem;
-  position: relative;
-  z-index: 2;
-}
-
-/* Animation fluide de halo */
-@keyframes rotateLight {
-  0% {
+@keyframes rotateBorder {
+  from {
     transform: rotate(0deg);
   }
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }

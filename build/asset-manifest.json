@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Solanight/static/css/main.e79151c6.css",
-    "main.js": "/Solanight/static/js/main.2b0f74c8.js",
+    "main.css": "/Solanight/static/css/main.8117fb88.css",
+    "main.js": "/Solanight/static/js/main.379384b6.js",
     "index.html": "/Solanight/index.html",
-    "main.e79151c6.css.map": "/Solanight/static/css/main.e79151c6.css.map",
-    "main.2b0f74c8.js.map": "/Solanight/static/js/main.2b0f74c8.js.map"
+    "main.8117fb88.css.map": "/Solanight/static/css/main.8117fb88.css.map",
+    "main.379384b6.js.map": "/Solanight/static/js/main.379384b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.e79151c6.css",
-    "static/js/main.2b0f74c8.js"
+    "static/css/main.8117fb88.css",
+    "static/js/main.379384b6.js"
   ]
 }
