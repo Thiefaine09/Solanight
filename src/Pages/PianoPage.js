@@ -1,11 +1,11 @@
 import React from 'react';
 import PianoPreview from '../components/PianoPreview';
-import MusicParticles from '../components/MusicParticles'; // ✅ Ton composant de particules musicales
+import MusicParticles from '../components/MusicParticles';
 
 function PianoPage() {
   return (
     <div className="relative bg-black min-h-screen overflow-hidden text-white">
-      {/* Particles notes de musique */}
+      {/* Particules musicales */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-30">
         <MusicParticles />
       </div>
@@ -13,34 +13,33 @@ function PianoPage() {
       {/* Contenu principal */}
       <section className="relative z-10 px-6 py-20 md:px-20">
         <div className="text-center mt-28 mb-16">
-        <h1
+          <h1
             className="text-4xl md:text-5xl font-bold text-white mb-4"
             style={{ textShadow: '1px 1px 4px rgba(255, 255, 255, 0.2)' }}
-        >
+          >
             🎹 Mon Univers
-        </h1>
-        <p className="text-lg text-gray-300 max-w-xl mx-auto">
+          </h1>
+          <p className="text-lg text-gray-300 max-w-xl mx-auto">
             Quelques-uns de mes meilleurs moments piano partagés sur TikTok.
-        </p>
+          </p>
         </div>
-
 
         {/* Galerie TikTok */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           <PianoPreview
             title="Bohemian Rhapsody"
             url="https://www.tiktok.com/@solanight_/video/7514997766880251158"
-            thumbnail="/assets/Bohemian.png"
+            thumbnail={`${process.env.PUBLIC_URL}/assets/Bohemian.png`}
           />
           <PianoPreview
             title="Master of Puppets"
             url="https://www.tiktok.com/@solanight_/video/7512069453404704022"
-            thumbnail="/assets/master-of-puppets.webp"
+            thumbnail={`${process.env.PUBLIC_URL}/assets/master-of-puppets.webp`}
           />
           <PianoPreview
             title="Metallica Impro"
             url="https://www.tiktok.com/@solanight_/video/7522053467578354966"
-            thumbnail="/assets/Metallica.jpg"
+            thumbnail={`${process.env.PUBLIC_URL}/assets/Metallica.jpg`}
           />
         </div>
 

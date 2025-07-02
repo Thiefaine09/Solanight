@@ -2,37 +2,37 @@ import React, { useState } from 'react';
 
 const photos = [
   {
-    src: '/assets/Shooting/prés_exterieur.jpg',
+    src: `${process.env.PUBLIC_URL}/assets/Shooting/prés_exterieur.jpg`,
     alt: 'Portrait studio – 2024',
     category: 'Visage',
     label: 'Portrait studio – 2024',
   },
   {
-    src: '/assets/Shooting/lunette_shooting_exterieur.jpg',
+    src: `${process.env.PUBLIC_URL}/assets/Shooting/lunette_shooting_exterieur.jpg`,
     alt: 'Look urbain – Paris',
     category: 'Look habillé',
     label: 'Look urbain – Paris',
   },
   {
-    src: '/assets/Shooting/shooting_urbain.jpg',
+    src: `${process.env.PUBLIC_URL}/assets/Shooting/shooting_urbain.jpg`,
     alt: 'Extérieur nature – 2025',
     category: 'Shooting extérieur',
     label: 'Extérieur nature – 2025',
   },
   {
-    src: '/assets/Shooting/prés.jpg',
+    src: `${process.env.PUBLIC_URL}/assets/Shooting/prés.jpg`,
     alt: 'Expression faciale intense',
     category: 'Visage',
     label: 'Expression faciale intense',
   },
   {
-    src: '/assets/Shooting/prés2.jpg',
+    src: `${process.env.PUBLIC_URL}/assets/Shooting/prés2.jpg`,
     alt: 'Look habillé – Studio lumière',
     category: 'Visage',
     label: 'Look habillé – Studio lumière',
   },
   {
-    src: '/assets/Shooting/prés2.jpg',
+    src: `${process.env.PUBLIC_URL}/assets/Shooting/prés2.jpg`,
     alt: 'Look habillé – Studio lumière',
     category: 'Look habillé',
     label: 'Look habillé – Studio lumière',

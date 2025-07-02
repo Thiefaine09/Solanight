@@ -72,7 +72,7 @@ function Hero() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/assets/Bohemian.mp4" type="video/mp4" />
+            <source src={`${process.env.PUBLIC_URL}/assets/Bohemian.mp4`} type="video/mp4" />
             Votre navigateur ne supporte pas la vidéo.
           </video>
         </div>

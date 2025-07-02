@@ -9,7 +9,8 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    <Router>
+    // 🔧 Ajout du basename ici pour GitHub Pages
+    <Router basename="/Solanight">
       <div className="bg-black text-white">
         <Navbar />
         <Routes>
