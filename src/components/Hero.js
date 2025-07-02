@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import MusicParticles from './MusicParticles';
+import './Hero.css'; // <-- Assure-toi que ce fichier existe bien
 
 function Hero() {
   const typedRef = useRef(null);
@@ -31,7 +32,7 @@ function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
-        {/* Texte à gauche */}
+        {/* Texte */}
         <div className="flex-1 text-center md:text-left space-y-6 font-lora">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
             Je suis <span className="text-red-600">Solanight</span>
@@ -49,9 +50,9 @@ function Hero() {
           </p>
         </div>
 
-        {/* Vidéo avec bordure tournante */}
+        {/* Vidéo avec bordure animée */}
         <div className="flex-1 w-full max-w-xs md:max-w-sm relative">
-          <div className="video-container">
+          <div className="video-glow-border">
             <video
               autoPlay
               loop
@@ -59,7 +60,10 @@ function Hero() {
               playsInline
               className="rounded-[1.5rem] object-cover w-full h-full"
             >
-              <source src={`${process.env.PUBLIC_URL}/assets/Bohemian.mp4`} type="video/mp4" />
+              <source
+                src={`${process.env.PUBLIC_URL}/assets/Bohemian.mp4`}
+                type="video/mp4"
+              />
               Votre navigateur ne supporte pas la vidéo.
             </video>
           </div>

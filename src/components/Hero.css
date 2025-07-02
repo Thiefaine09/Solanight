@@ -1,0 +1,38 @@
+.video-glow-border {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.video-glow-border::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  z-index: 1;
+  border-radius: 1.7rem;
+  background: conic-gradient(
+    from 0deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.5)
+  );
+  animation: spinBorder 6s linear infinite;
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+.video-glow-border video {
+  position: relative;
+  z-index: 2;
+  border-radius: 1.5rem;
+}
+
+/* Animation rotation */
+@keyframes spinBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
