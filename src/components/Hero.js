@@ -51,7 +51,7 @@ function Hero() {
 
           {/* Réseaux sociaux */}
           <div className="flex items-center justify-center md:justify-start space-x-6 mt-6">
-            <a href="https://www.instagram.com/solanight" target="_blank" rel="noreferrer" className="hover:text-red-500">
+            <a href="https://www.instagram.com/_solanight?igsh=aHR1aTQ4bzU2cmN2" target="_blank" rel="noreferrer" className="hover:text-red-500">
               <i className="fab fa-instagram text-2xl text-white"></i>
             </a>
             <a href="https://www.tiktok.com/@solanight_" target="_blank" rel="noreferrer" className="hover:text-red-500">
