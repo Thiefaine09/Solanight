@@ -24,12 +24,12 @@ function MusicParticles() {
             type: "image",
             image: [
               {
-                src: "/assets/note1.png",
+                src: `${process.env.PUBLIC_URL}/assets/note1.png`,
                 width: 32,
                 height: 32
               },
               {
-                src: "/assets/note2.png",
+                src: `${process.env.PUBLIC_URL}/assets/note2.png`,
                 width: 32,
                 height: 32
               }
