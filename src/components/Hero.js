@@ -31,7 +31,7 @@ function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
-        {/* Texte à gauche */}
+        {/* Texte */}
         <div className="flex-1 text-center md:text-left space-y-6 font-lora">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
             Je suis <span className="text-red-600">Solanight</span>
@@ -63,18 +63,27 @@ function Hero() {
           </div>
         </div>
 
-        {/* Vidéo à droite dans un style TikTok */}
-        <div className="flex-1 w-full max-w-xs md:max-w-sm aspect-[9/16] bg-black border border-white/10 rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(255,255,255,0.1)]">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
+        {/* Vidéo avec fond étoilé stylisé */}
+        <div className="flex-1 w-full max-w-xs md:max-w-sm relative group">
+          <div
+            className="rounded-[1.5rem] overflow-hidden border border-red-500 shadow-[0_0_25px_rgba(255,0,80,0.3)] group-hover:shadow-[0_0_50px_rgba(255,0,80,0.5)] transition-shadow duration-500"
+            style={{
+              backgroundImage: "url('/assets/stars.jpg')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
           >
-            <source src={`${process.env.PUBLIC_URL}/assets/Bohemian.mp4`} type="video/mp4" />
-            Votre navigateur ne supporte pas la vidéo.
-          </video>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
+            >
+              <source src="/assets/Bohemian.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la vidéo.
+            </video>
+          </div>
         </div>
       </div>
     </section>
