@@ -1,34 +1,44 @@
-.video-glow-border {
+.glow-border {
   position: relative;
-  border-radius: 1.5rem;
+  padding: 6px; /* fine bordure */
+  border-radius: 1rem;
+  background: black;
   overflow: hidden;
 }
 
-.video-glow-border::before {
+.glow-border::before {
   content: "";
   position: absolute;
-  inset: -6px;
-  z-index: 1;
-  border-radius: 1.7rem;
+  inset: 0;
+  padding: 3px;
+  border-radius: 1rem;
   background: conic-gradient(
     from 0deg,
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.05),
-    rgba(255, 255, 255, 0.5)
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.1)
   );
-  animation: spinBorder 6s linear infinite;
-  filter: blur(8px);
+  animation: rotateLight 5s linear infinite;
+  z-index: 1;
+  mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
   pointer-events: none;
 }
 
-.video-glow-border video {
+.glow-border video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
   position: relative;
   z-index: 2;
-  border-radius: 1.5rem;
 }
 
-/* Animation rotation */
-@keyframes spinBorder {
+/* Animation fluide de halo */
+@keyframes rotateLight {
   0% {
     transform: rotate(0deg);
   }

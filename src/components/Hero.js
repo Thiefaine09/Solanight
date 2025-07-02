@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import MusicParticles from './MusicParticles';
-import './Hero.css'; // <-- Assure-toi que ce fichier existe bien
+import './Hero.css'; // Important
 
 function Hero() {
   const typedRef = useRef(null);
@@ -26,13 +26,11 @@ function Hero() {
 
   return (
     <section id="hero" className="relative bg-black text-white py-20 px-6 md:px-12 overflow-hidden min-h-screen">
-      {/* Particules musicales */}
       <div className="absolute inset-0 h-full w-full z-0 pointer-events-none">
         <MusicParticles />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
-        {/* Texte */}
         <div className="flex-1 text-center md:text-left space-y-6 font-lora">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
             Je suis <span className="text-red-600">Solanight</span>
@@ -50,20 +48,17 @@ function Hero() {
           </p>
         </div>
 
-        {/* Vidéo avec bordure animée */}
+        {/* Vidéo avec halo lumineux animé */}
         <div className="flex-1 w-full max-w-xs md:max-w-sm relative">
-          <div className="video-glow-border">
+          <div className="glow-border">
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="rounded-[1.5rem] object-cover w-full h-full"
+              className="rounded-[1rem] object-cover w-full h-full"
             >
-              <source
-                src={`${process.env.PUBLIC_URL}/assets/Bohemian.mp4`}
-                type="video/mp4"
-              />
+              <source src={`${process.env.PUBLIC_URL}/assets/Bohemian.mp4`} type="video/mp4" />
               Votre navigateur ne supporte pas la vidéo.
             </video>
           </div>
