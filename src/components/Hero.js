@@ -50,6 +50,7 @@ function Hero() {
           </p>
 
           <div className="flex items-center justify-center md:justify-start space-x-6 mt-8">
+            {/* Réseaux sociaux */}
             <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="hover:text-red-500">
               <svg className="w-6 h-6 text-gray-300" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm4.75-2.25a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
@@ -63,22 +64,16 @@ function Hero() {
           </div>
         </div>
 
-        {/* Vidéo avec fond étoilé stylisé */}
-        <div className="flex-1 w-full max-w-xs md:max-w-sm relative group">
-          <div
-            className="rounded-[1.5rem] overflow-hidden border border-red-500 shadow-[0_0_25px_rgba(255,0,80,0.3)] group-hover:shadow-[0_0_50px_rgba(255,0,80,0.5)] transition-shadow duration-500"
-            style={{
-              backgroundImage: "url('/assets/stars.jpg')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          >
+        {/* Vidéo avec bordure blanche animée */}
+        <div className="flex-1 w-full max-w-xs md:max-w-sm relative">
+          <div className="relative rounded-[1.5rem] overflow-hidden w-full aspect-[9/16]">
+            <div className="absolute inset-0 z-10 pointer-events-none rounded-[1.5rem] border-4 border-transparent animate-borderGlow" />
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-full object-cover rounded-[1.5rem]"
             >
               <source src="/assets/Bohemian.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la vidéo.
