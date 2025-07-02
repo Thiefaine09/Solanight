@@ -12,7 +12,7 @@ function PianoPage() {
 
       {/* Contenu principal */}
       <section className="relative z-10 px-6 py-20 md:px-20">
-        <div className="text-center mt-28 mb-16">
+        <div className="text-center mb-16">
           <h1
             className="text-4xl md:text-5xl font-bold text-white mb-4"
             style={{ textShadow: '1px 1px 4px rgba(255, 255, 255, 0.2)' }}
