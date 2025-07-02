@@ -1,19 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logosolanight.png'; // adapte le chemin si besoin
 
 function Footer() {
   return (
     <footer className="bg-black text-gray-300 py-8 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        
-        {/* Logo + nom */}
-        <div className="flex items-center space-x-3">
-          <img src={logo} alt="Solanight logo" className="h-10" />
-          <span className="text-lg font-semibold text-white">Solanight</span>
-        </div>
 
-        {/* Liens React Router */}
+        {/* Logo + nom (comme la Navbar) */}
+        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/logosolanight.png`}
+            className="h-10 w-auto"
+            alt="Logo Solanight"
+          />
+          <span className="text-lg font-semibold text-white">Solanight</span>
+        </Link>
+
+        {/* Liens de navigation */}
         <div className="flex space-x-6 text-sm">
           <Link to="/" className="hover:text-red-500 transition">Accueil</Link>
           <Link to="/piano" className="hover:text-red-500 transition">Piano</Link>
