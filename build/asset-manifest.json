@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Solanight/static/css/main.291622c6.css",
+    "main.js": "/Solanight/static/js/main.c98800a2.js",
+    "index.html": "/Solanight/index.html",
+    "main.291622c6.css.map": "/Solanight/static/css/main.291622c6.css.map",
+    "main.c98800a2.js.map": "/Solanight/static/js/main.c98800a2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.291622c6.css",
+    "static/js/main.c98800a2.js"
+  ]
+}

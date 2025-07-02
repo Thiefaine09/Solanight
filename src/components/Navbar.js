@@ -4,10 +4,14 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleLinkClick = () => {
+    setIsOpen(false); // Ferme le menu mobile
+  };
+
   return (
     <nav className="bg-black fixed w-full z-20 top-0 start-0 border-b border-gray-800">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse" onClick={handleLinkClick}>
           <img
             src={`${process.env.PUBLIC_URL}/assets/logosolanight.png`}
             className="h-10 w-auto"
@@ -17,7 +21,7 @@ function Navbar() {
         </Link>
 
         <div className="flex md:order-2 items-center space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <Link to="/contact">
+          <Link to="/contact" onClick={handleLinkClick}>
             <button
               type="button"
               className="text-white bg-red-600 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 dark:focus:ring-red-800 transition"
@@ -59,16 +63,24 @@ function Navbar() {
         >
           <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-800 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-black">
             <li>
-              <Link to="/" className="block py-2 px-3 text-white hover:text-red-500">Accueil</Link>
+              <Link to="/" className="block py-2 px-3 text-white hover:text-red-500" onClick={handleLinkClick}>
+                Accueil
+              </Link>
             </li>
             <li>
-              <Link to="/piano" className="block py-2 px-3 text-white hover:text-red-500">Piano</Link>
+              <Link to="/piano" className="block py-2 px-3 text-white hover:text-red-500" onClick={handleLinkClick}>
+                Piano
+              </Link>
             </li>
             <li>
-              <Link to="/mannequinat" className="block py-2 px-3 text-white hover:text-red-500">Mannequinat</Link>
+              <Link to="/mannequinat" className="block py-2 px-3 text-white hover:text-red-500" onClick={handleLinkClick}>
+                Mannequinat
+              </Link>
             </li>
             <li>
-              <Link to="/contact" className="block py-2 px-3 text-white hover:text-red-500">Contact</Link>
+              <Link to="/contact" className="block py-2 px-3 text-white hover:text-red-500" onClick={handleLinkClick}>
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
